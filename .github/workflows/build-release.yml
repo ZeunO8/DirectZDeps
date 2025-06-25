@@ -38,10 +38,10 @@ jobs:
         run: sudo apt update && sudo apt install -y build-essential cmake ninja-build 
 
       - name: Configure CMake
-        run: cmake -B build -D CMAKE_BUILD_TYPE=Debug -D CMAKE_C_COMPILER=clang -D CMAKE_CXX_COMPILER=clang++ -G Ninja
+        run: cmake -G Ninja -B build -D CMAKE_BUILD_TYPE=Debug -D CMAKE_C_COMPILER=clang -D CMAKE_CXX_COMPILER=clang++
 
       - name: Build
-        run: cmake --build build --config Release
+        run: cmake --build build --config Debug -j1
 
       - name: Archive built libraries
         run: |
