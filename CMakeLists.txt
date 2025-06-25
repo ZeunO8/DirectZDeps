@@ -22,7 +22,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -w")
 message(STATUS "FetchContent: llvm-project")
 FetchContent_Declare(llvm
 	GIT_REPOSITORY https://github.com/llvm/llvm-project.git
-	GIT_TAG llvmorg-20.1.7)
+	GIT_TAG main)
 FetchContent_GetProperties(llvm)
 if(NOT llvm_POPULATED)
     FetchContent_Populate(llvm)
