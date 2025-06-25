@@ -28,7 +28,7 @@ if(NOT llvm_POPULATED)
     FetchContent_Populate(llvm)
 endif()
 
-set(LLVM_ENABLE_PROJECTS "clang;lld;clang-tools-extra")
+set(LLVM_ENABLE_PROJECTS "clang;lld")
 set(LLVM_ENABLE_ASSERTIONS ON)
 
 add_subdirectory(${llvm_SOURCE_DIR}/llvm)
