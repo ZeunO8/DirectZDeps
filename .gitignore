@@ -2,3 +2,11 @@ build
 build-windows
 build-linux
 build-macos
+build-android
+build-ios
+install
+install-windows
+install-linux
+install-macos
+install-android
+install-ios
