@@ -21,14 +21,18 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -w")
 
 message(STATUS "FetchContent: llvm-project")
 FetchContent_Declare(llvm
-	GIT_REPOSITORY https://github.com/llvm/llvm-project.git
-	GIT_TAG main)
+	GIT_REPOSITORY https://github.com/ZeunO8/llvm-project.git
+	GIT_TAG Fixes
+    GIT_SHALLOW TRUE)
 FetchContent_GetProperties(llvm)
 if(NOT llvm_POPULATED)
     FetchContent_Populate(llvm)
 endif()
 
-set(LLVM_ENABLE_PROJECTS "clang;lld")
+set(LLVM_ENABLE_PROJECTS "clang;lld;clang-tools-extra")
 set(LLVM_ENABLE_ASSERTIONS ON)
+set(BUILD_C_INDEX_TEST OFF)
+set(CLANG_BUILD_TOOLS OFF)
+set(CLANG_ENABLE_ARCMT OFF)
 
 add_subdirectory(${llvm_SOURCE_DIR}/llvm)
