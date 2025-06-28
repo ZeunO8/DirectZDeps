@@ -10,3 +10,4 @@ install-linux
 install-macos
 install-android
 install-ios
+_CPack_Packages
