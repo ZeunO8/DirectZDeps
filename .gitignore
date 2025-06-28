@@ -4,10 +4,12 @@ build-linux
 build-macos
 build-android
 build-ios
+build-unix
 install
 install-windows
 install-linux
 install-macos
 install-android
 install-ios
+install-unix
 _CPack_Packages
