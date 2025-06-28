@@ -18,6 +18,7 @@ include(FetchContent)
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -w")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -w")
+set(BUILD_SHARED_LIBS OFF)
 
 message(STATUS "FetchContent: llvm-project")
 FetchContent_Declare(llvm
